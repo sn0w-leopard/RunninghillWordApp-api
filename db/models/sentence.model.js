@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const SentenceSchema = new mongoose.Schema({
-    title: {
+    text: {
         type: String,
         required: true,
         minlength: [1, "Invalid sentence"],

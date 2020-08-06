@@ -6,7 +6,7 @@ const { Word } = require('../models/word.model');
 
 /**
  * @api {get} /words Get all words in dictionary
- * @apName GetWords
+ * @apiName GetWords
  * @apiGroup Words
  */
 router.get('/', (req,res) => {
@@ -18,8 +18,8 @@ router.get('/', (req,res) => {
 })
 
 /**
- * @api {get} /words Get all words of specified type in dictionary
- * @apName GetTypeWords
+ * @api {get} /words/:type Get all words of specified type in dictionary
+ * @apiName GetTypeWords
  * @apiGroup Words
  */
 router.get('/:type', (req, res, next) => {
@@ -40,7 +40,7 @@ router.get('/:type', (req, res, next) => {
 
 /**
  * @api {post} /words Add new word to dictionary
- * @apName PostWords
+ * @apiName PostWords
  * @apiGroup Words
  */
 router.post('/', (req,res) => {

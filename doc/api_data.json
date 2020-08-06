@@ -22,49 +22,59 @@
     "type": "",
     "url": "",
     "version": "0.0.0",
-    "filename": "./docs/main.js",
-    "group": "C:\\Users\\tkhar\\OneDrive\\Documents\\Runninghill\\int\\api\\docs\\main.js",
-    "groupTitle": "C:\\Users\\tkhar\\OneDrive\\Documents\\Runninghill\\int\\api\\docs\\main.js",
+    "filename": "./doc/main.js",
+    "group": "C:\\Users\\tkhar\\OneDrive\\Documents\\Runninghill\\int\\api\\doc\\main.js",
+    "groupTitle": "C:\\Users\\tkhar\\OneDrive\\Documents\\Runninghill\\int\\api\\doc\\main.js",
     "name": ""
   },
   {
     "type": "get",
     "url": "/sentences",
-    "title": "Get all sentences",
+    "title": "Get all sentences in dictionary",
+    "name": "GetSentences",
     "group": "Sentences",
     "version": "0.0.0",
-    "filename": "./app.js",
-    "groupTitle": "Sentences",
-    "name": "GetSentences"
+    "filename": "./db/routes/sentences.js",
+    "groupTitle": "Sentences"
   },
   {
     "type": "post",
     "url": "/sentences",
-    "title": "Save sentence",
+    "title": "Add new sentence to dictionary",
+    "name": "Postsentences",
     "group": "Sentences",
     "version": "0.0.0",
-    "filename": "./app.js",
-    "groupTitle": "Sentences",
-    "name": "PostSentences"
+    "filename": "./db/routes/sentences.js",
+    "groupTitle": "Sentences"
+  },
+  {
+    "type": "get",
+    "url": "/words/:type",
+    "title": "Get all words of specified type in dictionary",
+    "name": "GetTypeWords",
+    "group": "Words",
+    "version": "0.0.0",
+    "filename": "./db/routes/words.js",
+    "groupTitle": "Words"
   },
   {
     "type": "get",
     "url": "/words",
     "title": "Get all words in dictionary",
+    "name": "GetWords",
     "group": "Words",
     "version": "0.0.0",
-    "filename": "./app.js",
-    "groupTitle": "Words",
-    "name": "GetWords"
+    "filename": "./db/routes/words.js",
+    "groupTitle": "Words"
   },
   {
     "type": "post",
     "url": "/words",
     "title": "Add new word to dictionary",
+    "name": "PostWords",
     "group": "Words",
     "version": "0.0.0",
-    "filename": "./app.js",
-    "groupTitle": "Words",
-    "name": "PostWords"
+    "filename": "./db/routes/words.js",
+    "groupTitle": "Words"
   }
 ]

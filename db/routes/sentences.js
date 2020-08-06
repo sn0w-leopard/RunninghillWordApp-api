@@ -6,7 +6,7 @@ const { Sentence } = require('../models/sentence.model');
 
 /**
  * @api {get} /sentences Get all sentences in dictionary
- * @apName GetSentences
+ * @apiName GetSentences
  * @apiGroup Sentences
  */
 router.get('/', (req,res) => {
@@ -19,14 +19,14 @@ router.get('/', (req,res) => {
 
 /**
  * @api {post} /sentences Add new sentence to dictionary
- * @apName Postsentences
- * @apiGroup sentences
+ * @apiName Postsentences
+ * @apiGroup Sentences
  */
 router.post('/', (req,res) => {
-    let title = req.body.title;
+    let text = req.body.text;
 
     newsentence = new Sentence({
-        title
+        text
     })
 
     newsentence.save().then((sentenceDoc) =>{

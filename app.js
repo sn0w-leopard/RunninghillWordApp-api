@@ -46,39 +46,6 @@ app.use((error, req, res, next) => {
     });
 });
 
-
-/* SENTENCE ROUTES */
-
-/**
- * @api {get} /sentences Get all sentences
- * @apName GetSentence
- * @apiGroup Sentences
- */
-app.get('/sentences', (req,res) => {
-    Sentence.find({}).then((sentences) => {
-        res.send(sentences);
-    });    
-})
-
-/**
- * @api {post} /sentences Save sentence
- * @apName PostSentence
- * @apiGroup Sentences
- */
-app.post('/sentences', (req,res) => {
-    let title = req.body.title;
-    
-    newSentence = new Sentence({
-        title
-    })
-
-    newSentence.save().then((sentenceDoc) =>{
-        res.send(sentenceDoc);
-    })
-})
-
-
-
-app.listen(3000, () => {
-    console.log("Server is listening on port 3000");
+app.listen(process.env.PORT, () => {
+    console.log("Server is listening on port " + process.env.PORT );
 })

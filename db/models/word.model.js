@@ -5,7 +5,13 @@ const WordSchema = new mongoose.Schema({
         type: String,
         required: true,
         minlength: 1,
-        trim:true
+        trim: true
+    },
+    type: {
+        type: String,
+        required: true,
+        minlength: 4,
+        trim: true
     }
 })
 

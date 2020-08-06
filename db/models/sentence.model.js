@@ -4,7 +4,7 @@ const SentenceSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
-        minlength: 1,
+        minlength: [1, "Invalid sentence"],
         trim:true
     }
 })

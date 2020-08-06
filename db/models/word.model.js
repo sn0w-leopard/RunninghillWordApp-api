@@ -4,6 +4,7 @@ const WordSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
+        unique: true,
         minlength: 1,
         trim: true
     },

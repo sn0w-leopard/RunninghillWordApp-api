@@ -1,5 +1,6 @@
 {
     "env": {
-        "MONGO_ATLAS_PW": "hillrunner"
+        "MONGO_ATLAS_PW": "hillrunner",
+        "PORT": 3000
     }
 }

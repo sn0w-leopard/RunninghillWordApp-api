@@ -9,7 +9,7 @@ The backend provides all the words that can be selected in the lists. Restful GE
 
 API Documentation included in the `./doc` folder
 
-### To be used with RunninghillWordApp-api 
+### To be used with RunninghillWordApp-Frontend 
 
 ## Usage
 

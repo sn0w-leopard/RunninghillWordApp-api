@@ -1,7 +1,7 @@
 //Connection logic to the MongoDB database
 
 const mongoose = require('mongoose');
-const url = "mongodb+srv://RunninghillAdmin:"+ process.env.MONGO_ATLAS_PW +"@runninghill-word-app.1llvv.azure.mongodb.net/WordApp?retryWrites=true&w=majority";
+const url = "mongodb+srv://RunninghillAdmin:hillrunner@runninghill-word-app.1llvv.azure.mongodb.net/WordApp?retryWrites=true&w=majority";
 
 mongoose.Promise = global.Promise;
 mongoose.connect(url, {useNewUrlParser: true}).then(() => {

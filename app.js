@@ -1,5 +1,4 @@
 const express  = require('express');
-const morgan = require('morgan');
 const app = express();
 const bodyParser = require('body-parser');
 const {mongoose} = require('./db/mongoose');
@@ -8,9 +7,10 @@ const wordRoutes = require('./db/routes/words');
 const sentenceRoutes = require('./db/routes/sentences');
 
 /* MIDDLEWARE  */
-app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+app.use(express.static(process.cwd()+"../RunningHillWordApp/dist/RunningHillWordApp/"));
 
 //cors error catcher
 app.use((req, res, next) => {
@@ -31,6 +31,10 @@ app.use((req, res, next) => {
 app.use('/words', wordRoutes);
 app.use('/sentences', sentenceRoutes);
 
+app.get('/', (req,res, next) => {
+  res.sendFile(process.cwd()+"/../RunningHillWordApp/dist/RunningHillWordApp/index.html")
+});
+
 app.use((req, res, next) => {
     const error = new Error('Not found');
     error.status = 404;
@@ -46,6 +50,6 @@ app.use((error, req, res, next) => {
     });
 });
 
-app.listen(process.env.PORT, () => {
-    console.log("Server is listening on port " + process.env.PORT );
+app.listen(3000, () => {
+    console.log("Server is listening on port 3000");
 })
